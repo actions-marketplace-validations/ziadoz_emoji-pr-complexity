@@ -1,0 +1,15 @@
+name: Emoji PR Complexity
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ziadoz/emoji-pr-complexity@v1

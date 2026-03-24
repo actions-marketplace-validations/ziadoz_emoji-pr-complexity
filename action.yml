@@ -1,0 +1,17 @@
+name: Emoji PR Complexity
+description: Scores every pull request by complexity and prefixes the title with an emoji.
+author: ziadoz
+
+branding:
+  icon: crosshair
+  color: red
+
+inputs:
+  token:
+    description: GitHub token
+    required: true
+    default: ${{ github.token }}
+
+runs:
+  using: node20
+  main: dist/index.js
